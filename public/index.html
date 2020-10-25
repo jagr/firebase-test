@@ -10,10 +10,28 @@
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
 
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCnnVgfpUhSuJSyVo7Eu1zc2ksmW4OATeU",
+            authDomain: "metalreleases-a0f53.firebaseapp.com",
+            databaseURL: "https://metalreleases-a0f53.firebaseio.com",
+            projectId: "metalreleases-a0f53",
+            storageBucket: "metalreleases-a0f53.appspot.com",
+            messagingSenderId: "1010805833790",
+            appId: "1:1010805833790:web:df01ffa4c6731f4e16d16f",
+            measurementId: "G-7N0FMT3X07"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
     <script src="app.js" defer></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+    integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
+    crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -29,6 +47,11 @@
     <section id="whenSignedIn" hidden="true">
         <div id="userDetails"></div>
         <button id="signOutBtn" class="btn btn-primary">Sign out, goodbye..</button>
+    </section>
+
+    <section>
+        <ul id="thingslist"></ul>
+        <button id="createThing">Create Random thing</button>
     </section>
 </body>
 </html>
